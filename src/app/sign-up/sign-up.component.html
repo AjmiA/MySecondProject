@@ -1,0 +1,37 @@
+<form>
+    <div class="imgcontainer">
+        <h3>Register account</h3>
+    </div>
+
+    <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" [(ngModel)]="username" name="uname" required>
+
+
+        <label for="email"><b>Email</b></label>
+        <input type="email" placeholder="Enter email" [(ngModel)]="email" name="email" required>
+
+        <!--
+        <label for="fname"><b>Full name</b></label>
+        <input type="text" placeholder="Full name" name="fname" required>
+-->
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" [(ngModel)]="password" name="psw" required>
+
+        <label for="psw"><b>Re-enter password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <label for="atype"><b>Account Type</b></label>
+        <select name="atype" [(ngModel)]="userType">
+            <option value="0">Candidate</option>
+            <option value="1">Recruiter</option>
+        </select>
+
+        <button type="submit" (click)='signUp()' [routerLink]="['/login']" routerLinkActive="router-link-active" >Register</button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+        <button type="button" class="cancelbtn">Cancel</button>
+        <span class="psw">Already have an account ? <a [routerLink]="'/login'">Login</a></span>
+    </div>
+</form>

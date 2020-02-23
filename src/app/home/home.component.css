@@ -1,0 +1,137 @@
+
+header {
+    background-image: url("../../assets/landing.jpg");
+
+    /* Set a specific height */
+    min-height: 900px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0,0,0,0.5); 
+
+  box-shadow:inset 0 0 0 2000px rgba(21, 57, 78, 0.7);
+}
+
+
+header nav ul {
+    list-style-type: none;
+    font-size: larger;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header .landing {
+    color: white;
+}
+
+
+.navbar {
+    min-height: 80px;
+    /*background: none !important;
+    border-bottom: rgba(31, 31, 31, 0.445) 2px solid;*/
+}
+
+.header-actions {
+
+}
+
+.landing {
+    position: relative;
+    min-height: 750px;
+}
+
+.call-action {
+    padding: 0 50px;
+    width: 80%;
+}
+
+.call-action-selector {
+    text-align: center;
+}
+
+.call-action-selector button:nth-child(1) {    
+    background-color: rgba(102, 102, 102, 0.253);
+    border: 0;
+    color: white;
+    padding: 10px;
+}
+
+.call-action-selector button:nth-child(2) {
+    border: 0;
+    color: white;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 10px;
+}
+
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.job-search {
+    background-color: rgba(102, 102, 102, 0.253);
+    padding: 20px;
+}
+
+.job-search input {
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.job-search button {
+    padding: 11px;
+    border-radius: 15px;
+    box-sizing: unset;
+}
+
+.job-search select {
+    padding: 5px;
+    box-sizing: content-box;
+    border-radius: 15px;
+}
+
+.highlight {
+    color: #5bbfdf;
+}
+
+.job-categories {
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, 0);
+    padding:50px 0;
+}
+
+
+.job-categories .fas {
+    color: #5bbfdf;
+    margin-bottom: 20px;
+}
+
+.job-categories .row .col-sm {
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+    border: 1px solid rgb(201, 201, 201);
+    border-left: 0;
+}
+
+.job-categories .row .col-sm:hover {
+    background-color: #eeeeee;
+}
+
+.job-categories .row .col-sm:first-child {
+    border-left: 1px solid rgb(201, 201, 201);
+}
+
+@media only screen and (min-width: 600px) {
+    
+}

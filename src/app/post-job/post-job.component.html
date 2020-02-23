@@ -1,0 +1,120 @@
+<div class="hero-wrap hero-wrap-2" style="background-image: url('assets/landing.jpg');" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text align-items-end justify-content-start">
+            <div class="col-md-12 ftco-animate text-center mb-5">
+                <p class="breadcrumbs mb-0"><span class="mr-3"><a [routerLink]="['/']" class="homebtn" >Home > <i class="ion-ios-arrow-forward"></i></a></span> <span>Job Post</span></p>
+              <h1 class="mb-3 bread">Post A Job</h1>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container">
+    <div class="row">
+    <form class="form col-sm-8">
+        <div class="form-group">
+            <label for="jobtitle">Job Title</label>
+            <input class="form-control" type="text" placeholder="eg.Professional Designer"  [(ngModel)]="title"  name="jobtitle" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="field">Industry Field</label>
+            <input class="form-control" type="text" placeholder="" name="field" required [(ngModel)]="field">
+        </div>
+
+        <div class="form-group">
+            <label for="company">Company</label>
+            <input class="form-control" type="text" placeholder="eg.Facebook" name="company" required [(ngModel)]="company">
+        </div>
+
+        <div class="form-group">
+            <label for="">Job type</label>
+            <div class="radio">
+                <label for="type">
+                    <input class="" type="radio" name="type" required (ngModelChange)="chooseJobType($event)" [(ngModel)]="defaultChoice"  value="0"> Full Time
+                </label>
+            </div>
+            <div class="radio">
+                <label for="type">
+                    <input class="" type="radio" name="type" required (ngModelChange)="chooseJobType($event)" [(ngModel)]="defaultChoice"  value="1"> Part Time
+                </label>
+            </div>
+            <div class="radio">
+                <label for="type">
+                    <input class="" type="radio" name="type" required (ngModelChange)="chooseJobType($event)"  [(ngModel)]="defaultChoice"  value="2"> Freelance
+                </label>
+            </div>
+            <div class="radio">
+                <label for="type">
+                    <input class="" type="radio" name="type" required (ngModelChange)="chooseJobType($event)" [(ngModel)]="defaultChoice"  value="3"> Internship
+                </label>
+            </div>
+            <div class="radio">
+                <label for="type">
+                    <input class="" type="radio" name="type" required (ngModelChange)="chooseJobType($event)"  [(ngModel)]="defaultChoice"  value="4"> Temporary
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="location">Location</label>
+            <input class="form-control" type="text" placeholder="tunis City" name="location" required [(ngModel)]="location">
+        </div>
+        <div class="form-group">
+            <label for="education">Education</label>
+            <input class="form-control" type="text" placeholder="" name="education" required [(ngModel)]="education">
+        </div>
+        <div class="form-group">
+            <label for="requiredskills">Skills</label>
+            <input class="form-control" type="text" placeholder="" name="requiredskills" required [(ngModel)]="requiredSkills">
+        </div>
+        <div class="form-group">
+            <label for="minexperience">Min.Experience</label>
+            <input class="form-control" type="text" placeholder="" name="minexperience" required [(ngModel)]="experience">
+        </div>
+
+
+        <div class=" form-group">
+            <label for="description">Job Description </label>
+            <textarea name="description" class="form-control" id="" cols="30" rows="8" [(ngModel)]="description"></textarea>
+        </div>
+        
+
+
+        <div class=" form-group">
+            <input type="submit" (click)="post()" value="Post" class="btn btn-primary  py-2 px-5">
+
+        </div>
+    </form>
+    <div class="col-sm-4">
+        <div class="card" style="width: 400px;">
+
+            <!--Card image-->
+            <div class="view overlay">
+              <img src="assets/man2.png" class="card-img-top"
+                alt="">
+              <a href="#">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+
+            <!--Card content-->
+            <div class="card-body">
+              <!--Title-->
+              <h4 class="card-title">Contact Info</h4>
+              <!--Text-->
+              <p class="card-text font-weight-bold"> Address</p>
+              <p class="mb-4">tunis</p>
+
+              <p class="mb-0 font-weight-bold">Phone</p>
+              <p class="mb-4"><a href="#">52914274</a></p>
+              <p class="mb-0 font-weight-bold">Email Address</p>
+              <p class="mb-0"><a href="#"><span class="__cf_email__" data-cfemail="671e081215020a060e0b2703080a060e094904080a">manel.dhib22@outlook.fr</span></a></p>
+            </div>
+
+          </div>
+        <div class=""></div>
+    </div>
+</div>
+</div>

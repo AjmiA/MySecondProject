@@ -1,0 +1,27 @@
+.container {
+    padding: 16px;
+  }
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    
+  }
+  .hero-wrap{
+    height: 450px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow:inset 0 0 0 2000px rgba(21, 57, 78, 0.7);
+    color: white;
+    padding-top: 210px;
+}
+.profbtn{
+    text-decoration: none;
+    color: #5bbfdf;
+}
+.nav-item{
+    width: 250px;
+    height: 50px;
+}
+

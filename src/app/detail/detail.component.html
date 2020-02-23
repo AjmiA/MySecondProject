@@ -1,0 +1,188 @@
+<div class="hero-wrap hero-wrap-2" style="background-image: url('assets/landing.jpg');"
+    data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-start">
+            <div class="col-md-12 ftco-animate text-center mb-5">
+                <p class="breadcrumbs mb-0"><span class="mr-3"><a [routerLink]="['/']" class="profbtn">YOUR Profil >
+                        </a></span> <span>Job Post</span></p>
+                <h1 class="mb-3 bread">PROFIL</h1>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="container">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/profil']">Identification</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" [routerLink]="['/detail']">Contenu</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/validation']">Validation</a>
+        </li>
+
+    </ul>
+
+    <div id="accordion">
+        <div class="card">
+         
+
+
+
+
+            <div class="card">
+                <div class="card-header" id="headingtwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapsetwo"
+                            aria-expanded="true" aria-controls="collapsetwo">
+                            Education
+                        </button>
+
+                        <button class="btn btn-link float-right" (click)="addEducation()">+</button>
+                    </h5>
+                </div>
+                
+                <app-education  *ngFor="let item of educations" [id]="item" [callback]="removeEducation"></app-education >
+                    
+            </div>
+
+
+
+            <div class="card">
+                <div class="card-header" id="headingthree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapsethree"
+                            aria-expanded="true" aria-controls="collapsethree">
+                            Work Experience
+                        </button>
+
+                        
+                    </h5>
+                </div>
+
+                <div id="collapsethree" class="collapse show" aria-labelledby="headingthree" data-parent="#accordion">
+                    <div class="card-body">
+                        <div class="row ml-3">
+                            <div class="form-inline">
+                                <div class="form-group mr-4">
+
+
+                                    <label for="post" class="mr-4">Post</label>
+                                    <input type="text" name="post" class="form-control">
+
+                                </div>
+                                <div class="form-group mr-2">
+
+
+                                    <label for="employe" class="mr-2"> Employe </label>
+                                    <input type="text" name="employe" class="form-control">
+
+                                </div>
+                                <div class="form-group mr-3">
+
+
+
+                                    <input type="text" name="city" class="form-control mr-3" placeholder=" City">
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                        <div class="row mt-3 ml-3">
+                            <div class="form-inline">
+                                <div class="form-group mr-5">
+
+
+                                    <label for="From" class="mr-5">From </label>
+                                    <input type="date" name="From" class="form-control">
+
+                                </div>
+                                <div class="form-group mr-5">
+
+
+                                    <label for="To" class="mr-5"> To </label>
+                                    <input type="date" name="To" class="form-control">
+
+                                </div>
+
+
+
+                            </div>
+
+                        </div>
+
+                        <div class="row mt-3 ml-3">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Description</span>
+                                </div>
+                                <textarea class="form-control" cols="50" rows="5" aria-label="With textarea"></textarea>
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="heading4">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapse4"
+                            aria-expanded="true" aria-controls="collapse4">
+                            Skills
+                        </button>
+                        <button class="btn btn-link float-right" (click)="addSkill()">+</button>
+                    </h5>
+                </div>
+
+            <app-skills *ngFor="let item of skills" [id]="item" [callback]="removeSkill"></app-skills>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading5">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapse5"
+                            aria-expanded="true" aria-controls="collapse5">
+                            Languages
+                        </button>
+                        <button class="btn btn-link float-right" (click)="addLanguage()">+</button>
+                    </h5>
+                </div>
+
+
+              <app-languages *ngFor="let item of languages" [id]="item" [callback]="removeLanguage"></app-languages>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading6">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapse6"
+                            aria-expanded="true" aria-controls="collapse6">
+                            Hobbies and Interests
+                        </button>
+                        <button class="btn btn-link float-right" (click)="addHobby()">+</button>
+                    </h5>
+                </div>
+
+              <app-hobbies *ngFor="let item of hobbies" [id]="item" [callback]="removeHobby"></app-hobbies>
+            </div>
+        </div>
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" (click)='Next()' class="cancelbtn btn btn-primary btn-lg"> Next </button>
+
+        </div>
+
+    </div>
